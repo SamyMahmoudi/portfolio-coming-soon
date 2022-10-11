@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'Glorify';
+    src: url('./fonts/Glorify.woff2') format('woff2'),
+        url('./fonts/Glorify.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-color: #2C363F;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------------ HEADER -------------- */
+.header {
+    width: 100%;
+    text-align: center;
+    padding-top: 10%;
+}
+
+/* ------------ MAIN CONTENT -------------- */
+.main {
+    flex-grow: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main h1 {
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Glorify DEMO';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.main p {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Glorify DEMO';
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ------------ FOOTER -------------- */
+.footer {
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer a {
+    display: block;
+    height: max-content;
+    width: max-content;
+}
+
+.footer a:nth-child(2) {
+    margin: 0 20px;
+}
+
+
+/* ------------ RESPONSIVE -------------- */
+@media screen and (min-width : 600px) 
+{
+    /* ------------ HEADER -------------- */
+    .header {
+        padding-top: 6%;
+    }
+
+    /* ------------ MAIN CONTENT -------------- */
+    .main h1 {
+        color: white;
+        text-align: center;
+        font-size: 64px;
+    }
+    
+    .main p {
+        color: white;
+        text-align: center;
+        font-size: 48px;
+        padding: 0 6%;
+    }
+
+    /* ------------ FOOTER -------------- */
+    .footer {
+        padding-bottom: 6%;
+    }
+}
+
+@media screen and (min-width : 880px) 
+{
+    /* ------------ HEADER -------------- */
+    .header {
+        padding-top: 3%;
+    }
+
+    /* ------------ MAIN CONTENT -------------- */
+    .main h1 {
+        font-size: 64px;
+    }
+    
+    .main p {
+        font-size: 48px;
+        padding: 0 6%;
+    }
+
+    /* ------------ FOOTER -------------- */
+    .footer {
+        padding-bottom: 3%;
+    }
+}
+
+@media screen and (min-width : 1240px) 
+{
+    /* ------------ MAIN CONTENT -------------- */
+    .main h1 {
+        font-size: 80px;
+        position: relative;
+        width: max-content;
+        margin: 0 auto;
+        z-index: 5;
+    }
+
+    .main h1::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        background: #E54848;
+        filter: blur(70px);
+        height: 60px;
+        width: 60px;
+    }
+    
+    .main p {
+        font-size: 64px;
+        position: relative;
+        z-index: 5;
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    .main p::before {
+        content: "";
+        position: absolute;
+        left: 10%;
+        top: 0;
+        z-index: -1;
+        background: #D9D9D9;
+        filter: blur(60px);
+        height: 60px;
+        width: 60px;
+    }
+
+    /* ------------ FOOTER -------------- */
+    .footer a {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .footer a:hover {
+        transform: translateY(-10px);
+        transition: transform 0.2s ease-in-out;
+    }
+}
+
+@media screen and (min-width : 1540px) 
+{
+    /* ------------ MAIN CONTENT -------------- */
+    .main h1 {
+        font-size: 80px;
+    }
+    
+    .main p {
+        font-size: 60px;
+    }
+}
